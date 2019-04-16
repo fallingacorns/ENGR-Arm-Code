@@ -1,0 +1,24 @@
+void setup(){
+  //code that should only run once goes here
+}
+
+void loop()
+{
+  //will loop through the entire time that the arduino is running
+
+  while(pin[on/off=on]){
+    //generating the random movements through calling the different controllers
+    x = 0;
+    if (x%2 == 0){
+      //call the first motor controller
+    }
+    else if(x%2 != 0){
+      //call the second motor controller
+    }
+    else(){
+      //call the third motor controller
+    }
+    x = random();
+    delay(100);
+  }
+}
