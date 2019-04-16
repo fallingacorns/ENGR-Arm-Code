@@ -1,24 +1,39 @@
 void setup(){
   //code that should only run once goes here
+  pinMode(13, INPUT) //the on/off switch
+  pinMode(1, OUTPUT) //this and below are the motor controllers
+  pinMode(2, OUTPUT)
+  pinMode(3, OUTPUT)
+  //these pin numbers can be changed later they don't matter right now
 }
-
 void loop()
 {
   //will loop through the entire time that the arduino is running
-
   while(pin[on/off=on]){
     //generating the random movements through calling the different controllers
     x = 0;
     if (x%2 == 0){
       //call the first motor controller
+      digitalWrite(1, HIGH);
+      delay();
+      //some ammount of time doesn't matter right now
+      digitalWrite(1, LOW);
+      //this pusles the motor controller which should create movement
     }
     else if(x%2 != 0){
       //call the second motor controller
+      digitalWrite(2, HIGH);
+      delay();
+      digitalWrite(2, LOW);
     }
     else(){
       //call the third motor controller
+      digitalWrite(2, HIGH);
+      delay();
+      digitalWrite(2, LOW);
     }
     x = random();
     delay(100);
   }
+  break;
 }
