@@ -1,0 +1,31 @@
+#include <Servo.h>
+Servo bottomservo;
+void setup(){
+  int inputPin = x; //input pin
+  word stored = LOW; //stores the on/off value of the servo
+  pinMode(inputPin, INPUT);
+  int int_position = 0; //stores intial int_position
+  int position = 0;
+  //will be whatever the input pin for the specific motor controller is
+  bottomservo.attach(inputPin);
+  int min_pos = 0;
+  int max_pos = 0;
+  //the minimum and max positions that the motor can spin
+}
+void loop(){
+  stored = digitalRead(inputPin);
+  position = random(min_pos, max_pos);
+  //generates a random position for the arm to move to
+  if(stored == HIGH){
+    //this activates the motor in order to do create a motion
+    for (position of the servo){
+      myservo.write(position);
+      delay();
+      //delay to be figured out after
+    }
+
+  }
+  if(stored == LOW){
+    break;
+  }
+}

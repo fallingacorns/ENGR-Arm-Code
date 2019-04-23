@@ -1,8 +1,10 @@
+#include <Servo.h>
+Servo MC;
 void setup(){
-  int inputPin = 1;
+  int inputPin = x;
   int stored = 0; //stores the on/off value of the servo
   pinMode(inputPin, INPUT);
-  Servo myservo;
+  Servo MC;
   int position = 0; //stores the position of the servo
   //will be whatever the input pin for the specific motor controller is
   myservo.attach(inputPin);

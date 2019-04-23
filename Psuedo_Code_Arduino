@@ -1,9 +1,18 @@
 void setup(){
   //code that should only run once goes here
-  pinMode(13, INPUT) //the on/off switch
-  pinMode(1, OUTPUT) //this and below are the motor controllers
-  pinMode(2, OUTPUT)
-  pinMode(3, OUTPUT)
+  int x = x;
+  int y = y;
+  int z = z;
+  //these are for what ever we define the pins of the actual arm to be
+  int switch = switch;
+  //this is for the on/off analog switch on the box
+  int rot = rot;
+  //this is for the pin of the servo that rotates at the bottom
+  pinMode(switch, INPUT) //the on/off switch
+  pinMode(x, OUTPUT) //this and below are the motor controllers
+  pinMode(y, OUTPUT)
+  pinMode(z, OUTPUT)
+  pinMode(rot, OUTPUT)
   //these pin numbers can be changed later they don't matter right now
 }
 void loop()
