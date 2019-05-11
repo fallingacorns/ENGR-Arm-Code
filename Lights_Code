@@ -1,0 +1,10 @@
+//the code for the light display on the edge of the boxes
+void setup(){
+int inputPin1 = x;
+int inputPin2 = y;
+int inputPin3 = z;
+int inputPin4 = xx;
+}
+void loop(){
+
+}
