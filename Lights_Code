@@ -1,10 +1,31 @@
 //the code for the light display on the edge of the boxes
 void setup(){
-int inputPin1 = x;
-int inputPin2 = y;
-int inputPin3 = z;
-int inputPin4 = xx;
+  int inputPin1 = w;
+  int inputPin2 = x;
+  int inputPin3 = y;
+  int inputPin4 = z;
+  repeater = 0;
 }
 void loop(){
+  pinMode(LEDPin1, OUTPUT);
+  pinMode(LEDPin2, OUTPUT);
+  pinMode(LEDPin3, OUTPUT);
+  pinMode(LEDPin4, OUTPUT);
+  if (repeater >= 0){
+    digitalWrite(LEDPin1, LOW);
+    digitalWrite(LEDPin2, LOW);
+    digitalWrite(LEDPin3, LOW);
+    digitalWrite(LEDPin4, LOW);
+    repeater++1;
+    delay(1000);
+    if (repeater==4) {
+      digitalWrite(LEDPin1, HIGH);
+      digitalWrite(LEDPin2, HIGH);
+      digitalWrite(LEDPin3, HIGH);
+      digitalWrite(LEDPin4, HIGH);
+      repeater=0;
+    }
+    }
+  }
 
 }
