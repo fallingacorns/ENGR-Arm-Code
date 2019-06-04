@@ -1,0 +1,41 @@
+#include <Servo.h>
+Servo Arm1;
+Servo Arm2;
+int bState = 0;
+const int buttonPin = 8;
+const int oLightPin = 2;
+const int iLightPin = 3;
+const int aLightPin = 5;
+const int bLightPin = 4;
+const int Arm1Pin = 9;
+const int Arm2Pin = 7;
+void setup() {
+  pinMode(Arm1Pin, OUTPUT);
+  pinMode(Arm2Pin, OUTPUT);
+  Arm1.attach(Arm1Pin);
+  Arm2.attach(Arm2Pin);
+  pinMode(oLightPin, OUTPUT);
+  pinMode(iLightPin, OUTPUT);
+  pinMode(aLightPin, OUTPUT);
+  pinMode(bLightPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+void loop() {
+  bState = digitalRead(buttonPin);
+  int rand = random(0, 180);
+  Arm1.write(rand);
+  Arm2.write(180 - rand);
+  digitalWrite(aLightPin, HIGH);
+  digitalWrite(bLightPin, HIGH);
+  delay(750);
+  if(bState == LOW){
+    digitalWrite(iLightPin, HIGH);
+    digitalWrite(oLightPin, HIGH);
+  }
+  else if(bState != LOW){
+   digitalWrite(aLightPin, HIGH);
+    digitalWrite(bLightPin, HIGH);
+  }
+}
+
+ 
